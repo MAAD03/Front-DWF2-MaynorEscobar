@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Configuración de Pistas - Codifica con Guali</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>Configuración de Pistas</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Volver al Juego</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="adminCRUD.html">Administrar Usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <h2>Panel de Configuración de Pista</h2>
+
+            <div class="config-toolbar">
+                <label>
+                    Modo:
+                    <select id="config-mode" class="form-input">
+                        <option value="path">Marcar ruta</option>
+                        <option value="start">Establecer inicio</option>
+                        <option value="goal">Establecer meta</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="config-toolbar">
+                <label for="track-select">Pistas guardadas:</label>
+                <select id="track-select" class="form-input"></select>
+                <button id="btn-load-track" class="button">Cargar</button>
+                <button id="btn-new-track" class="button">Nueva pista</button>
+                <button id="btn-delete-track" class="button">Eliminar</button>
+                <button id="btn-export-track" class="button">Exportar</button>
+                <label for="btn-import-track" class="button">Importar
+                    <input type="file" id="btn-import-track" accept=".json" style="display: none;">
+                </label>
+            </div>
+
+            <div id="admin-board" class="board board-config"></div>
+
+            <div class="modal-actions">
+                <button id="btn-save-track" class="button">Guardar</button>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="config.js"></script>
+</body>
+</html>

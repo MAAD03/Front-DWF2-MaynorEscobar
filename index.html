@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Codifica con Guali - Fase 1</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>Codifica con Guali</h1>
+        <nav>
+            <a href="login.html">
+                <button id="btn-config" class="button">Configurar</button>
+            </a>
+            <button id="btn-reiniciar" class="button">Reiniciar</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <div id="board" class="board" data-rows="5" data-cols="4"></div>
+            <div id="message" class="message"></div>
+        </section>
+
+        <aside class="right">
+            <div class="controls">
+                <h3>Movimientos</h3>
+                <div class="btn-row">
+                    <button id="btn-forward" class="button">Adelante</button>
+                    <button id="btn-left" class="button">Girar Izq</button>
+                    <button id="btn-right" class="button">Girar Der</button>
+                    <button id="btn-loop" class="button">Iniciar Bucle</button>
+                </div>
+                <h4>Comandos Seleccionados</h4>
+                <ol id="move-list" class="move-list"></ol>
+                <div class="action-row">
+                    <button id="btn-execute" class="button">Ejecutar</button>
+                    <button id="btn-clear-moves" class="button">Limpiar</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

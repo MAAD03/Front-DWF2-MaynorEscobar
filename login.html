@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <h1>Iniciar Sesión</h1>
+    </div>
+    <div class="container">
+        <div class="modal-content" style="width: 100%; max-width: 400px; margin: 20px auto;">
+            <form id="loginForm">
+                <div style="margin-bottom: 16px;">
+                    <label for="correo" style="display: block; margin-bottom: 8px; font-weight: 600;">Correo</label>
+                    <input type="email" id="correo" name="correo" required
+                           style="width: 100%; padding: 8px; border: 1px solid #cfd8e3; border-radius: 6px;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label for="password" style="display: block; margin-bottom: 8px; font-weight: 600;">Contraseña</label>
+                    <input type="password" id="password" name="password" required
+                           style="width: 100%; padding: 8px; border: 1px solid #cfd8e3; border-radius: 6px;">
+                </div>
+                <div class="message" id="message" style="display: none;"></div>
+                <div class="modal-actions">
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>

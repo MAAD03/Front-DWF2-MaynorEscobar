@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Administrador de Usuarios - Codifica con Guali</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="topbar">
+        <h1>Administrador de Usuarios</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Volver al Juego</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="controls">
+                <h3>Administradores</h3>
+                <button id="add-admin-btn" class="button">Agregar Administrador</button>
+                <table id="admin-table" class="admin-table">
+                    <thead>
+                        <tr class="table-header">
+                            <th>ID</th>
+                            <th>Correo</th>
+                            <th>Contraseña</th>
+                            <th>Nombre</th>
+                            <th>Activo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-title">Agregar Administrador</h3>
+            <form id="admin-form">
+                <input type="hidden" id="admin-id">
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="activo">Activo:</label>
+                    <input type="checkbox" id="activo" checked>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="button">Guardar</button>
+                    <button type="button" id="cancel-btn" class="button">Cancelar</button>
+                </div>
+            </form>
+            <div id="modal-message" class="message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
